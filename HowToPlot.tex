@@ -1,0 +1,68 @@
+% Encoding: UTF-8
+\documentclass[accentcolor=tud2b,colorback,12pt,parskip] {tudreport}
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype} % optischer Randausgleich bei pdflatex mit Zeichendehnung
+\usepackage[output-decimal-marker={,}]{siunitx}
+
+%% Tabelleneinstellungen
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{makecell}
+\renewcommand\theadfont{\bfseries}
+
+%%sonstige
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[textsize=scriptsize]{todonotes}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{nicefrac}
+\usepackage{icomma}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{listings}
+
+\DeclareCaptionLabelFormat{subfig}{\figurename\ \arabic{chapter}.\arabic{figure}#2}
+
+\newcommand{\chap}[1]{{\let\clearpage\relax \chapter{#1}}}
+
+	%% listings setup
+
+\lstset{
+	inputencoding=utf8,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	breaklines=true,
+	frame=single,
+	captionpos=b,
+	rulecolor=\color{gray},
+	language=sh,
+	tabsize=4,
+	showstringspaces=flase,
+	basicstyle={\ttfamily\scriptsize},
+	morekeywords={enum, @interface, assert},
+	backgroundcolor=\color{white},
+	literate=%
+}
+\lstMakeShortInline[columns=fixed, basicstyle={\ttfamily\small}]|
+\newcommand{\lstinl}{\lstinline[basicstyle={\ttfamily\small}]}
+
+\setinstitutionlogo[height]{images/fablabLogo}
+
+\begin{document}
+\title{How to plot using Inkscape}
+\subsubtitle{FabLab Darmstadt \hfill Version 1, April 2019 }
+
+\maketitle
+%\clearpage
+\pagestyle{headings}
+\pagenumbering{arabic}
+\tableofcontents
+
+\include{text}
+
+
+\end{document}
